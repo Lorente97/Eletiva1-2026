@@ -10,10 +10,10 @@
 <div class="container py-3">
   <h1>Primeiro exemplo PHP</h1>
   <h3>Data de hoje: <?php echo date("d/m/y"); ?></h3>
-<form method="get">
+<form method="post" action="resposta.php">
 <div class="mb-3">
-              <label for="" class="form-label">Informe o seu nome:</label>
-              <input type="text" id="" name="" class="form-control" required="">
+              <label for="nome" class="form-label">Informe o seu nome:</label>
+              <input type="text" id="nome" name="nome" class="form-control" required="">
             </div>
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
