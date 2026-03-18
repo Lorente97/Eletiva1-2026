@@ -44,18 +44,23 @@
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 <?php
-if($_SERVER['REQUEST_METHOD'] == "POST")
-{
-    $mapa = $_POST['nome'];
-    $fone = $_POST['fone'];
+if($_SERVER['REQUEST_METHOD']=="POST"){
+    $contatos = [];
+    for($i=0;$i<5;$i++){
+        $nome = $_POST['nome'][$i];
+        $fone = $_POST['fone'][$i];
 
-    for($i = 0; $i <5; $i++){
+        $duplicado = 0;
+        foreach($contatos as $n => $f){
+            if($nome==$n || $fone==$f){echo "Duplicado: $nome / $fone"; $duplicado=1;}
+        }
 
-    echo"$mapa[$i]\t";
-    echo"$fone[$i]\t";
+        if($duplicado==0){$contatos[$nome]=$fone;}
+    }
 
-    sort($mapa);
-}   }
+    ksort($contatos);
+    foreach($contatos as $n => $f){echo "<p>Nome: $n - Telefone: $f";}
+}
 ?>
 
 </div>
