@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">    
+</head>
+<body>
+    <main class="container">
+        <div>
+            <h1 class="text-center">Sample Form</h1>
+        </div>
+        <form>
+            <div class="row mb-3">
+                <div class="col-6">
+                    <div class="row align-items-center">
+                        <div class="col-4 text-end">
+                            <label for="PartnerName" class="mb-0 fw-bold">Partner Name</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="PartnerName" name="PartnerName" class="form-control">
+                        </div>
+                    </div>
+                </div>    
+                <div class="col-6">
+                    <div class="row align-items-center">
+                        <div class="col-4 text-end">
+                            <label for="PartnerEmailID" class="mb-0 fw-bold">Partner Email ID</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="email" id="PartnerEmailID" name="PartnerEmailID" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <div class="row mb-3">
+                <div class="col-6">
+                    <div class="row align-items-center">
+                        <div class="col-4 text-end">
+                            <label for="PartLegalName" class="mb-0 fw-bold">Partner Legal Name</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="PartLegalName" name="PartLegalName" class="form-control">
+                        </div>
+                    </div>
+                </div>    
+                <div class="col-6">
+                    <div class="row align-items-center">
+                        <div class="col-4 text-end">
+                            <label for="PartMobile" class="mb-0 fw-bold">Partner Mobile</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="tel" id="PartMobile" name="PartMobile" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="d-flex align-items-center">
+                        <div class="col-2 text-end pe-4">
+                            <label for="PartAddress" class="mb-0 fw-bold">Partner Address</label>
+                        </div>
+                        <div class="col-10">
+                            <textarea id="PartAddress" name="PartAddress" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6">
+                    <div class="row align-items-center">
+                        <div class="col-4 text-end">
+                            <label for="StartDate" class="mb-0 fw-bold">Contract Start Date</label>
+                        </div>
+                        <div class="col-8">
+                            <input id="StartDate" name="StartDate" class="form-control" placeholder="Date Start">
+                        </div>
+                    </div>
+                </div>    
+                <div class="col-6">
+                    <div class="row align-items-center">
+                        <div class="col-4 text-end">
+                            <label for="ExpiryDate" class="mb-0 fw-bold">Contract Expiry Date</label>
+                        </div>
+                        <div class="col-8">
+                            <input id="ExpiryDate" name="ExpiryDate" class="form-control" placeholder="Date End">
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <div class="row mb-3">
+                <div class="col-6">
+                    <div class="row align-items-center">
+                        <div class="col-4 text-end">
+                            <label for="MinLoanAmount" class="mb-0 fw-bold">Minimum Loan Amount</label>
+                        </div>
+                        <div class="col-8">
+                            <input id="MinLoanAmount" name="MinLoanAmount" class="form-control">
+                        </div>
+                    </div>
+                </div>    
+                <div class="col-6">
+                    <div class="row align-items-center">
+                        <div class="col-4 text-end">
+                            <label for="MaxLoanAmount" class="mb-0 fw-bold">Maximum Loan Amount</label>
+                        </div>
+                        <div class="col-8">
+                            <input id="MaxLoanAmount" name="MaxLoanAmount" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6">
+                    <div class="row align-items-center">
+                        <div class="col-4 text-end">
+                            <label for="InterestRate" class="mb-0 fw-bold">Interest Rate</label>
+                        </div>
+                        <div class="col-8">
+                            <input id="InterestRate" name="InterestRate" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row align-items-center">
+                        <div class="col-4 text-end">
+                            <label for="DepositAmount" class="mb-0 fw-bold">Deposit Amount</label>
+                        </div>
+                        <div class="col-8">
+                            <input id="DepositAmount" name="DepositAmount" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>    
+</body>
+</html>
