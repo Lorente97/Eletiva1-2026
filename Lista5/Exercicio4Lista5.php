@@ -54,10 +54,27 @@
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<?php
+if($_SERVER['REQUEST_METHOD']=="POST"){
+
+    $itens = array();
+
+    for($i=0;$i<5;$i++){
+        $nome = $_POST['nome'][$i];
+        $preco = $_POST['preco'][$i];
+
+        $preco = $preco + ($preco * 0.15);
+
+        $itens[$nome] = $preco;
+    }
+
+    asort($itens);
+
+    foreach($itens as $nome => $preco){
+        echo $nome . " - " . $preco . "<br>";
+    }
+}
+?>
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
