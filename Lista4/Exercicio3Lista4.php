@@ -11,17 +11,24 @@
 <h1></h1>
 <form method="post">
 <div class="mb-3">
-              <label for="palavra" class="form-label">Insira a palavra:</label>
-              <input type="text" id="palavra" name="palavra" class="form-control" required="">
+              <label for="palavra1" class="form-label">Digite a primeira palavra:</label>
+              <input type="text" id="palavra1" name="palavra1" class="form-control" required="">
+            </div><div class="mb-3">
+              <label for="palavra2" class="form-label">Digite a segunda palavra</label>
+              <input type="text" id="palavra2" name="palavra2" class="form-control" required="">
             </div>
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
 <?php
-$palavra = $_POST["palavra"];
+$palavra1 = $_POST["palavra1"];
+$palavra2 = $_POST["palavra2"];
 
-echo "Maiúsculo: " . strtoupper($palavra) . "<br>";
-echo "Minúsculo: " . strtolower($palavra);
+if (strpos($palavra1, $palavra2) !== false) {
+    echo "A segunda palavra está contida na primeira.";
+} else {
+    echo "A segunda palavra NÃO está contida na primeira.";
+}
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </div>
