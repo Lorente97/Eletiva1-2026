@@ -11,7 +11,7 @@
 <h1></h1>
 <form method="post">
 <div class="mb-3">
-              <label for="numero" class="form-label">Digite o número que quer saber a raiz quadrada:</label>
+              <label for="numero" class="form-label">Digite o número escolhido:</label>
               <input type="text" id="numero" name="numero" class="form-control" required="">
             </div>
 <button type="submit" class="btn btn-primary">Enviar</button>
@@ -20,7 +20,9 @@
 <?php
 $numero = $_POST["numero"];
 
-echo "Raiz quadrada: " . sqrt($numero);
+echo "Arredondado para cima: " . ceil($numero) . "<br>";
+echo "Arredondado para baixo: " . floor($numero) . "<br>";
+echo "Arredondado normalmente: " . round($numero);
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </div>
