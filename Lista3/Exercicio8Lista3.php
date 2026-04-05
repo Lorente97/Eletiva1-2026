@@ -18,21 +18,14 @@
 </form>
 
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $numero = $_POST["numero"];
-
-    if ($numero != "" && $numero >= 1) {
-
-        $i = $numero;
-
-        do {
-            echo $i . "<br>";
-            $i--;
-        } while ($i >= 1);
-
-    } else {
-        echo "Por favor, insira um número válido maior ou igual a 1.";
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["numero"] >= 1) {
+    
+    for ($i = $_POST["numero"]; $i >= 1; $i--) {
+        echo $i . "<br>";
     }
+
+} else {
+    echo "Por favor, insira um número válido maior ou igual a 1.";
 }
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
